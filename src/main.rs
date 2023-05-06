@@ -10,12 +10,11 @@ Steps for this program
 */
 
 fn main() {
-    println!("Welcome to guessing game");
-    println!("Please input your guess");
+    println!("Welcome to guessing game \n Please input your guess");
     //generate random number here
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number: u32 = rand::thread_rng().gen_range(1..=100);
     loop{
-        let mut guess = String::new();
+        let mut guess: String = String::new();
         io::stdin().
             read_line(&mut guess).
             expect("Failed to read line");
